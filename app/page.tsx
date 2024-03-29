@@ -7,6 +7,7 @@ export default function Home() {
   const reloadParentSite = () => {
     // Access the parent window and call the reloadMainSite function
     window.parent.reloadMainSite();
+    console.log("hello world");
   };
   return (
     <main className={styles.main}>
