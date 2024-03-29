@@ -4,10 +4,14 @@ import styles from "./page.module.css";
 import { useEffect } from "react";
 
 export default function Home() {
+  const reloadParentSite = () => {
+    // Access the parent window and call the reloadMainSite function
+    window.parent.reloadMainSite();
+  };
   return (
     <main className={styles.main}>
       <div>
-        <button>Proceed</button>
+        <button onClick={reloadParentSite}>Proceed</button>
       </div>
     </main>
   );
